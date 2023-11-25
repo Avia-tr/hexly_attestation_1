@@ -1,11 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap");
-
-/*
 @font-face {
 	font-family:"Poppins";
-	src: url("./fonts/Poppins-Regular.ttf") format("truetype");
+	src: url("../fonts/Poppins-Regular.ttf") format("truetype");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -13,8 +8,8 @@
 
 @font-face {
 	font-family:"Poppins";
-	src: url("./fonts/Poppins-ExtraBold.ttf") format("truetype");
-	font-weight: 500;600;700;
+	src: url("../fonts/Poppins-ExtraBold.ttf") format("truetype");
+	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
@@ -22,39 +17,26 @@
 
 @font-face {
 	font-family:"Jost";
-	src: url("./fonts/Jost-Italic-VariableFont_wght.ttf") format("truetype");
-	font-weight: normal;
+	src: url("../fonts/Jost-Regular.ttf") format("truetype");
+	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
-*/
 
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-li,
-ol,
-form,
-input,
-textarea,
-button {
-  margin: 0;
-  padding: 0;
+@font-face {
+	font-family:"Jost";
+	src: url("../fonts/Jost-ExtraBold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
 }
 
-		
-
-
 body {
-	
-	
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   color: #383838;
+  margin: 0;
+  padding: 0;
 }
 
 p {
@@ -81,7 +63,7 @@ input[type=text], textarea {
   background-color: #FFF;
   border: 0;
   box-shadow: 13px 21px 4px 0px rgba(0, 0, 0, 0.25);
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 400;
   color: #000000;
 }
@@ -91,6 +73,7 @@ textarea {
 }
 
 input[type=text]::placeholder, textarea::placeholder {
+  font-family: "Poppins", sans-serif !important;
   font-size: 1em;
   font-weight: 400;
   color: #000000;
@@ -126,7 +109,7 @@ button.btn-form {
   cursor: pointer;
   font-size: 1.5em;
   font-weight: 400;
-  color: #000000 !important;
+  color: #000000 ;
 }
 
 header {
@@ -138,13 +121,13 @@ header {
 }
 
 header .logo {
-  border:1px solid black;
+  border:none;
   flex: 0 0 35%;
   align-items: center;
   margin: 0;
   color: #0E0578;
   font-weight: 700;
-  font-size: 2.4em;
+  font-size: 3em;
 }
 
 header .menu {
@@ -372,8 +355,8 @@ footer .footer-top .footer-subscribe {
 
 footer .footer-top .footer-subscribe .logo {
   margin-bottom: 5%;
-  font-family: "Popins", sans-serif;
-  font-size: 2.8em;
+  font-family: "Poppins", sans-serif;
+  font-size: 3em;
   font-weight: 700;
   color: #0E0578;
   letter-spacing: 0.25em;
@@ -389,12 +372,14 @@ footer .footer-top .footer-subscribe .form input {
   flex-grow: 1;
   background-color: transparent;
   border: 0;
-  box-shadow: none !important;
-  color: #FFF !important;
+  box-shadow: none;
+  color: #FFF;
 }
 
 footer .footer-top .footer-subscribe .form input::placeholder {
-  color: #FFF !important;
+  font-family: "Jost";
+  font-weight: 700;
+  color: #FFF;
 }
 
 footer .footer-top .footer-subscribe .form button {
@@ -402,8 +387,9 @@ footer .footer-top .footer-subscribe .form button {
   border-radius: 30px;
   padding: 0 3%;
   background-color: #F965FC;
-  font-size: 1.5em;
-  font-weight: 400;
+  font-family: "Jost";
+  font-size: 2em;
+  font-weight: 700;
   color: #FFF;
   cursor: pointer;
 }
@@ -418,13 +404,21 @@ footer .footer-top .footer-menu > nav,
 footer .footer-top .footer-menu > div {
   font-family: "Jost", sans-serif;
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 2.4em;
 }
 
 footer .footer-top .footer-menu > nav ul {
+  padding: 0;
+  margin: 0;
+  
   list-style: none;
-  font-weight: normal;
+  font-weight: 400;
+}
+
+footer .footer-top .footer-menu > nav ul li {
+  padding: 0;
+  margin: 0;
 }
 
 footer .footer-top .footer-menu > nav a {
@@ -434,7 +428,7 @@ footer .footer-top .footer-menu > nav a {
 
 footer .footer-top .footer-menu .phone,
 footer .footer-top .footer-menu .address {
-  font-weight: normal;
+  font-weight: 400;
 }
 
 footer .footer-top .footer-menu .address {
